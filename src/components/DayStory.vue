@@ -1,6 +1,6 @@
 <template>
-  <v-sheet class="day-story">
-    <div class="day-story__title">
+  <v-sheet class="day-story ">
+    <div class="title d-flex justify-center py-3">
       {{dayStory.title}}
     </div>
     <v-divider></v-divider>
@@ -26,12 +26,10 @@
 </template>
 
 <script>
-  import Menu from "@/components/Menu";
   import axios from 'axios'
 
   export default {
     name: 'DayStory',
-    components: {Menu},
     data () {
       return {
         dayStory : []
@@ -47,13 +45,7 @@
 
 <style scoped lang="scss">
 .day-story {
-  padding: 10px 20px;
-  &__title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-    padding: 10px 0;
-  }
+
   &__story {
     text-align: justify;
     padding: 20px 0;
