@@ -32,4 +32,7 @@ export default {
       padding: 10px 20px;
     }
   }
+  .v-text-field.v-text-field--enclosed:not(.v-text-field--rounded) > .v-input__control > .v-input__slot, .v-text-field.v-text-field--enclosed .v-text-field__details {
+    padding: 0px 0px !important;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-sheet class="day-story ">
-    <div class="title d-flex justify-center py-3">
+    <div class="page-title d-flex justify-center py-3">
       {{dayStory.title}}
     </div>
     <v-divider></v-divider>
@@ -54,4 +54,8 @@
 }
 
 
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
 </style>
