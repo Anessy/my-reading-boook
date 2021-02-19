@@ -18,8 +18,8 @@
         allowfullscreen>
       </iframe>
     </v-sheet>
-    <v-sheet v-else>
-      <img :src="dayStory.hdurl" alt="" style="width: 100%">
+    <v-sheet v-else class="d-flex justify-center">
+      <img :src="dayStory.hdurl" alt="" style="width: 90%">
     </v-sheet>
   </v-sheet>
 
@@ -45,7 +45,6 @@
 
 <style scoped lang="scss">
 .day-story {
-
   &__story {
     text-align: justify;
     padding: 20px 0;

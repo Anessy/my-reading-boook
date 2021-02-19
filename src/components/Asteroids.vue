@@ -23,6 +23,9 @@
       <v-col class="px-1 my-1">
         <img src="./../assets/6.jpg" alt="" class="asteroids__image">
       </v-col>
+      <v-col cols="12">
+        <p>These are examples of asteroid images. They were taken at different times from the orbit of the earth.</p>
+      </v-col>
     </v-row>
     <div class="asteroids__text">
       It is a web service for near earth Asteroid information. With NeoWs a user can:
@@ -30,7 +33,7 @@
 
     <v-form
       v-model="valid">
-      <v-container>
+      <v-container fluid>
         <v-row>
           <div class="d-flex align-center">
             <v-icon
@@ -45,7 +48,7 @@
           </div>
         </v-row>
         <v-row class="mt-2">
-          <v-col cols="4">
+          <v-col sm="12" md="8" lg="6" xl="6">
             <v-text-field
               v-model="year"
               :counter="4"
@@ -56,7 +59,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="4">
+          <v-col sm="12" md="8" lg="6" xl="6">
             <v-autocomplete
               v-model="autocompleteValue"
               :items="autocompleteItems"
@@ -70,7 +73,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="4">
+          <v-col sm="12" md="8" lg="6" xl="6">
             <v-text-field
               v-model="day"
               :counter="2"
@@ -135,6 +138,14 @@
           <v-divider class="mt-8"></v-divider>
         </div>
       </div>
+      <v-row>
+        <v-col cols="6">
+          <img src="./../assets/7.jpg" alt="" class="asteroids__image">
+        </v-col>
+        <v-col cols="6">
+          <p>Psyche was discovered by Italian astronomer Annibale de Gasparis on March 17, 1852. He named the asteroid for Psyche, the Greek goddess of the soul who was born mortal and married Eros (Roman Cupid), the god of Love.</p>
+        </v-col>
+      </v-row>
     </v-sheet>
 
   </v-sheet>
@@ -180,7 +191,7 @@
       ...mapState(['month']),
       isButtonDisabled () {
         if (this.day != '' && this.year != '' && this.autocompleteValue != null) {
-          if (this.monthCount > this.day && this.year > 1940 && this.year < 2021 && this.day.length === 2) {
+          if (this.monthCount > this.day && this.year >= 1940 && this.year <= 2021 && this.day.length === 2) {
             this.buttonName = 'Find asteroids'
             return false
           } else {
@@ -258,6 +269,12 @@
   .page-title {
     font-size: 2rem;
     font-weight: 600;
+  }
+
+  .v-btn:not(.v-btn--round).v-size--default {
+    height: auto;
+    min-width: 64px;
+    padding: 12px 16px;
   }
 
 </style>
